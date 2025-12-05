@@ -1,10 +1,11 @@
 public class Envio_urgente  extends Envio{
-    public Envio_urgente(String ciudad, String direccion, String nombre, String apellido, Repartidor repartidor, float peso, float precio) {
-        super(ciudad, direccion, nombre, apellido, repartidor, peso, precio);
+    public Envio_urgente(String ciudad, Repartidor repartidor, double peso) {
+        super(ciudad, repartidor, peso);
     }
+
     public void  definirPrecio(){
         //8 euros por kilo
-        setPrecio(getPeso() * 8);
+        super.setPrecio(getPeso() * 8);
 
     }
 }

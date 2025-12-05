@@ -3,24 +3,24 @@ public abstract class Repartidor {
     private String nombre;
     private String apellidos;
     private boolean disponible;
-    private float precio;
+    private double precio;
 
-    public Repartidor(String nombre, String apellidos, boolean disponible, float precio) {
+    public Repartidor(String nombre, String apellidos, boolean disponible, double precio) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.disponible = disponible;
         this.precio = precio;
     }
 
-    public static void precioRepartidor(){
+    public  void precioRepartidor(){
 
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public  void setPrecio(double precio) {
         this.precio = precio;
     }
 }

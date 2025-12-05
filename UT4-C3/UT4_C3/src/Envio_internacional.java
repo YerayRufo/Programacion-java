@@ -1,11 +1,11 @@
 public class Envio_internacional  extends Envio{
-    public Envio_internacional(String ciudad, String direccion, String nombre, String apellido, Repartidor repartidor, float peso, float precio) {
-        super(ciudad, direccion, nombre, apellido, repartidor, peso, precio);
+    public Envio_internacional(String ciudad, Repartidor repartidor, double peso) {
+        super(ciudad, repartidor, peso);
     }
 
     public void  definirPrecio(){
         //15 euros por kilo
-        setPrecio(getPeso() * 15);
+        super.setPrecio(getPeso() * 15);
 
     }
 }

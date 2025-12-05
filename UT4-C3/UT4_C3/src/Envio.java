@@ -7,33 +7,38 @@ public abstract class Envio {
 
 
 
-    private float peso;
+    private double peso;
 
 
-    private float precio;
+    private double precio;
 
 
-    public Envio(String ciudad, String direccion, String nombre, String apellido, Repartidor repartidor, float peso, float precio) {
+    public Envio(String ciudad, Repartidor repartidor, double peso) {
         this.ciudad = ciudad;
-        this.direccion = direccion;
-        this.nombre = nombre;
-        this.apellido = apellido;
         this.repartidor = repartidor;
         this.peso = peso;
-        this.precio = precio;
+        this.precio = 0;
     }
 
 
-    public float getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
     public void  definirPrecio(){
         //4 euros por kilo
         setPrecio(getPeso() * 4);
 
+    }
+
+    public Repartidor getRepartidor() {
+        return repartidor;
+    }
+
+    public void setRepartidor(Repartidor repartidor) {
+        this.repartidor = repartidor;
     }
 }
