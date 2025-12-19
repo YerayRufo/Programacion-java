@@ -6,8 +6,9 @@ public class Main {
     static Scanner t = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("introduce un numero de 4 cifras");
-        Principal2.run();
+
+        Principal2 p=new Principal2();
+        p.run();
 
 
     }
